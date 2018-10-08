@@ -23,3 +23,14 @@
     }
   }
 }
+button {
+  &.active {
+    color: map-get($mat-indigo, 500);
+    opacity: 1;
+
+    .mat-icon {
+      color: map-get($mat-indigo, 500);
+      opacity: 1;
+    }
+  }
+}

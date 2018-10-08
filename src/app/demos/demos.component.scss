@@ -1,0 +1,9 @@
+@import "../../theme";
+
+:host {
+  display: flex;
+  margin: 16px;
+}
+.mat-stroked-button {
+  padding: 32px;
+}

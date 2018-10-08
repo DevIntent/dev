@@ -27,8 +27,7 @@ import {ButtonBarComponent} from './button-bar/button-bar.component';
     MatButtonModule,
     MatToolbarModule,
     MatTooltipModule,
-    FlexLayoutModule,
-    RouterModule
+    FlexLayoutModule
   ]
 })
 export class DevintentModule {

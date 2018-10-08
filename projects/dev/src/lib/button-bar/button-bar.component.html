@@ -21,7 +21,9 @@
   <mat-menu #overflowMenu="matMenu" [overlapTrigger]="false">
     <button mat-menu-item color="primary"
             *ngFor="let item of overflowMenuItems"
-            [routerLink]="item.path">
+            [routerLink]="item.path"
+            routerLinkActive #rla="routerLinkActive"
+            [ngClass]="{'active': rla.isActive}">
       <mat-icon>{{item.iconName}}</mat-icon>
       <span>{{item.label}}</span>
     </button>
