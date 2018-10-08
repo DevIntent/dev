@@ -1,6 +1,6 @@
 {
   "name": "@devintent/dev",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Application Development Library",
   "keywords": [
     "material", "design", "angular", "material design", "components"
@@ -8,6 +8,9 @@
   "author": "Michael Prentice",
   "license": "MIT",
   "private": false,
+  "homepage": "https://devintent-dev.firebaseapp.com/",
+  "repository": "https://github.com/DevIntent/dev/tree/master/projects/dev",
+  "bugs": "https://github.com/DevIntent/dev/issues",
   "dependencies": {
     "tslib": "^1.9.3"
   },

@@ -1,6 +1,13 @@
 {
   "name": "dev-demo",
-  "version": "0.0.3",
+  "description": "DevIntent Application Development Tools",
+  "version": "0.0.4",
+  "repository": "https://github.com/DevIntent/dev",
+  "homepage": "https://devintent-dev.firebaseapp.com/",
+  "bugs": "https://github.com/DevIntent/dev/issues",
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve dev-demo",
@@ -9,6 +16,7 @@
     "build:schematics": "tsc -p ./projects/schematics/tsconfig.json",
     "publish:lib": "npm run lint && npm run build:lib && npm publish ./dist/dev --access public",
     "publish:schematics": "npm run build:schematics && npm publish ./projects/schematics --access public",
+    "deploy": "firebase deploy",
     "test": "ng test && npm run test:schematics",
     "test:schematics": "npm run build:schematics && jasmine ./projects/schematics/src/**/*_spec.js",
     "lint": "ng lint",
