@@ -1,16 +1,22 @@
 import {NgModule} from '@angular/core';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
-import {DevComponent} from '../../projects/dev/src/lib/dev.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DevintentModule} from '../../projects/dev/src/lib/devintent.module';
 
 import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DevComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    DevintentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

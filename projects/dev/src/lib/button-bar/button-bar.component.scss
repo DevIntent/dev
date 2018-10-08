@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+
+// TODO support theming of components
+.mat-toolbar {
+  padding-top: 2px;
+
+  button {
+    opacity: 0.6;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: map-get($mat-indigo, 50);
+    }
+
+    &.active {
+      color: map-get($mat-indigo, 500);
+      opacity: 1;
+    }
+
+    &.mat-icon-button {
+      margin-right: 8px;
+    }
+  }
+}
