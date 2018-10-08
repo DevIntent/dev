@@ -1,18 +1,29 @@
-# DevDemo
+# DevIntent Application Development Tools
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.0-rc.2.
+This root project contains a demo app, in [src/](src/), that demonstrates the features of the
+[@devintent/dev](projects/dev) application development library.
+
+This repository also includes [@devintent/schematics](projects/schematics) which provide code generation
+based upon the modules in the `@devintent/dev` library.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` to serve the demo app in a dev server.
+Navigate to `http://localhost:4200/`.
+The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component. You can also use
+`ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Run `npm run build` to build the demo project.
+The build artifacts will be stored in the `dist/dev-demo` directory.
+- Run `npm run build:lib` to build the library project.
+The build artifacts will be stored in the `dist/dev` directory.
+- Run `npm run build:schematics` to build the schematics project.
 
 ## Running unit tests
 

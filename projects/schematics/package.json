@@ -1,0 +1,12 @@
+{
+  "name": "@devintent/schematics",
+  "version": "0.0.1",
+  "description": "Application Development Schematics",
+  "keywords": [
+    "schematics", "material", "design", "angular", "material design", "components"
+  ],
+  "author": "Michael Prentice",
+  "license": "MIT",
+  "private": false,
+  "schematics": "./src/collection.json"
+}

@@ -1,13 +1,13 @@
 {
   "name": "@devintent/dev",
-  "version": "0.0.1",
-  "description": "Application Development Library and Schematics",
+  "version": "0.0.2",
+  "description": "Application Development Library",
   "keywords": [
-    "schematics", "material", "design", "angular", "material design", "components"
+    "material", "design", "angular", "material design", "components"
   ],
   "author": "Michael Prentice",
   "license": "MIT",
-  "schematics": "./schematics/collection.json",
+  "private": false,
   "dependencies": {
     "tslib": "^1.9.3"
   },
