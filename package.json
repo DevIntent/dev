@@ -1,7 +1,7 @@
 {
   "name": "dev-demo",
   "description": "DevIntent Application Development Tools",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": "https://github.com/DevIntent/dev",
   "homepage": "https://devintent-dev.firebaseapp.com/",
   "bugs": "https://github.com/DevIntent/dev/issues",
