@@ -5,7 +5,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
-import {DevintentModule} from '../../projects/dev/src/lib/devintent.module';
+import {DevintentModule} from '@devintent/dev';
 
 import {AppComponent} from './app.component';
 import {BusinessComponent} from './business/business.component';

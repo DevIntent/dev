@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NavItem} from '../../../projects/dev/src/lib/nav-item';
+import {NavItem} from '@devintent/dev';
 
 @Component({
   selector: 'dev-button-bar-demo',

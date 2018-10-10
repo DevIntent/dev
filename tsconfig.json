@@ -18,10 +18,10 @@
       "dom"
     ],
     "paths": {
-      "dev": [
+      "@devintent/dev": [
         "dist/dev"
       ],
-      "dev/*": [
+      "@devintent/dev/*": [
         "dist/dev/*"
       ]
     }
