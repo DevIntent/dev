@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+@mixin dev-button-bar-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  .dev-button-bar {
+    button {
+      &:hover,
+      &:focus {
+        background-color: mat-color($primary, 50);
+      }
+
+      &.active {
+        color: mat-color($primary, 500);
+      }
+    }
+  }
+  .dev-button-bar-menu-item {
+    &.active {
+      color: mat-color($primary, 500);
+
+      .mat-icon {
+        color: mat-color($primary, 500);
+      }
+    }
+  }
+}

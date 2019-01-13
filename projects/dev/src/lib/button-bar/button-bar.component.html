@@ -1,28 +1,24 @@
-<mat-toolbar class="mat-elevation-z1">
+<mat-toolbar class="dev-button-bar mat-elevation-z1">
   <button mat-button
      *ngFor="let button of namedButtons"
-     [routerLink]="button.path"
-     routerLinkActive #rla="routerLinkActive"
+     [routerLink]="button.path" routerLinkActive #rla="routerLinkActive"
      [ngClass]="{'active': rla.isActive}">
     {{button.label}}
   </button>
   <button mat-icon-button
      *ngFor="let button of iconButtons"
-     [routerLink]="button.path"
-     routerLinkActive #rla="routerLinkActive"
+     [routerLink]="button.path" routerLinkActive #rla="routerLinkActive"
      [ngClass]="{'active': rla.isActive}" [matTooltip]="button.label">
      <mat-icon>{{button.iconName}}</mat-icon>
   </button>
   <span fxFlex></span>
-  <button mat-icon-button [matMenuTriggerFor]="overflowMenu" class="overflowMenu"
-          *ngIf="overflowMenuItems.length">
+  <button mat-icon-button [matMenuTriggerFor]="overflowMenu" *ngIf="overflowMenuItems.length">
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #overflowMenu="matMenu" [overlapTrigger]="false">
-    <button mat-menu-item color="primary"
+    <button mat-menu-item class="dev-button-bar-menu-item"
             *ngFor="let item of overflowMenuItems"
-            [routerLink]="item.path"
-            routerLinkActive #rla="routerLinkActive"
+            [routerLink]="item.path" routerLinkActive #rla="routerLinkActive"
             [ngClass]="{'active': rla.isActive}">
       <mat-icon>{{item.iconName}}</mat-icon>
       <span>{{item.label}}</span>
