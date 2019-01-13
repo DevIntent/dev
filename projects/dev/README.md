@@ -24,13 +24,13 @@ features.
 
 #### Usage
 
-Template ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.html))
+##### Template ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.html))
 ```html
 <dev-button-bar [navItems]="navItems" class="mat-elevation-z1"></dev-button-bar>
 <router-outlet></router-outlet>
 ```
 
-Component ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.ts))
+##### Component ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.ts))
 ```ts
 import {NavItem} from '@devintent/dev';
 ...
@@ -47,7 +47,7 @@ this.navItems = [
 ```
 Find icon names by searching the [Material Design Icons Tool](https://material.io/tools/icons/).
 
-Module
+##### Module
 ```ts
 import {DevintentModule} from '@devintent/dev';
 ...
@@ -56,8 +56,21 @@ imports: [
 ],
 ```
 
-Routing
+##### Routing
 
 This component requires that you have appropriate routing set up to match the route paths in the `NavItem` entries.
 Here is our [demo routing config](https://github.com/DevIntent/dev/blob/master/src/app/app.module.ts#L26-L44) and
 it's [import](https://github.com/DevIntent/dev/blob/master/src/app/app.module.ts#L71).
+
+##### Theming ([example](https://github.com/DevIntent/dev/blob/master/src/styles.scss#L15-L16))
+
+The component themes work with Angular Material [Custom Themes](https://material.angular.io/guide/theming#defining-a-custom-theme)
+which are defined in `.scss` files.
+
+```scss
+@include angular-material-theme($demo-theme);
+
+// In addition to telling Angular Material about your theme, you also need to let the @devintent/dev
+// components know about your theme.
+@include dev-theme($demo-theme);
+```
