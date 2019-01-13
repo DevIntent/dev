@@ -22,15 +22,15 @@ Portrait Phone<br>
 Find the [demo here](https://devintent-dev.firebaseapp.com/button-bar). Resize the screen width to see the responsive
 features.
 
-#### Usage
+#### Button Bar Usage
 
-##### Template ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.html))
+##### Button Bar Template ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.html))
 ```html
 <dev-button-bar [navItems]="navItems" class="mat-elevation-z1"></dev-button-bar>
 <router-outlet></router-outlet>
 ```
 
-##### Component ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.ts))
+##### Button Bar Component ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.ts))
 ```ts
 import {NavItem} from '@devintent/dev';
 ...
@@ -47,7 +47,7 @@ this.navItems = [
 ```
 Find icon names by searching the [Material Design Icons Tool](https://material.io/tools/icons/).
 
-##### Module
+##### Button Bar Module
 ```ts
 import {DevintentModule} from '@devintent/dev';
 ...
@@ -56,13 +56,13 @@ imports: [
 ],
 ```
 
-##### Routing
+##### Button Bar Routing
 
 This component requires that you have appropriate routing set up to match the route paths in the `NavItem` entries.
 Here is our [demo routing config](https://github.com/DevIntent/dev/blob/master/src/app/app.module.ts#L26-L44) and
 it's [import](https://github.com/DevIntent/dev/blob/master/src/app/app.module.ts#L71).
 
-##### Theming ([example](https://github.com/DevIntent/dev/blob/master/src/styles.scss#L15-L16))
+##### Button Bar Theming ([example](https://github.com/DevIntent/dev/blob/master/src/styles.scss#L15-L16))
 
 The component themes work with Angular Material [Custom Themes](https://material.angular.io/guide/theming#defining-a-custom-theme)
 which are defined in `.scss` files.
