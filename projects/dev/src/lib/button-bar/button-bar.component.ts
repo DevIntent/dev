@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy, Input} from '@angular/core';
-import {MediaChange, ObservableMedia} from '@angular/flex-layout';
+import {MediaObserver} from '@angular/flex-layout';
 import {NavItem} from '../nav-item';
 import {Subscription} from 'rxjs';
 
@@ -15,10 +15,10 @@ export class ButtonBarComponent implements OnInit, OnDestroy {
   iconButtons: NavItem[] = [];
   overflowMenuItems: NavItem[] = [];
 
-  constructor(public mediaService: ObservableMedia) {}
+  constructor(public mediaService: MediaObserver) {}
 
   ngOnInit() {
-    this.watcher = this.mediaService.subscribe((change: MediaChange) => {
+    this.watcher = this.mediaService.asObservable().subscribe(() => {
       this.onMediaChange();
     });
   }
