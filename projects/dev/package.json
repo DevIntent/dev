@@ -1,6 +1,6 @@
 {
   "name": "@devintent/dev",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Application Development Library",
   "keywords": [
     "material", "design", "angular", "material design", "components"
@@ -8,17 +8,17 @@
   "author": "Michael Prentice",
   "license": "MIT",
   "private": false,
-  "homepage": "https://devintent-dev.firebaseapp.com/",
+  "homepage": "https://devintent-dev.web.app",
   "repository": "https://github.com/DevIntent/dev/tree/master/projects/dev",
   "bugs": "https://github.com/DevIntent/dev/issues",
   "dependencies": {
-    "tslib": "^1.9.3"
+    "tslib": "^1.10.0"
   },
   "peerDependencies": {
-    "@angular/cdk": "^7.0.0",
-    "@angular/common": "^7.0.0",
-    "@angular/core": "^7.0.0",
-    "@angular/flex-layout": "^7.0.0-beta.19 || ^7.0.0",
-    "@angular/material": "^7.0.0"
+    "@angular/cdk": "^8.0.0",
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "@angular/flex-layout": "^8.0.0-beta.26 || ^8.0.0",
+    "@angular/material": "^8.0.0"
   }
 }

@@ -3,7 +3,7 @@
   "description": "DevIntent Application Development Tools",
   "version": "0.2.0",
   "repository": "https://github.com/DevIntent/dev",
-  "homepage": "https://devintent-dev.firebaseapp.com/",
+  "homepage": "https://devintent-dev.web.app",
   "bugs": "https://github.com/DevIntent/dev/issues",
   "engines": {
     "node": ">=10"
