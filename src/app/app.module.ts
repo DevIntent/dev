@@ -1,11 +1,14 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirePerformanceModule} from '@angular/fire/performance';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
 import {DevintentModule} from '@devintent/dev';
+import {environment} from '../environments/environment';
 
 import {AppComponent} from './app.component';
 import {BusinessComponent} from './business/business.component';
@@ -68,7 +71,9 @@ export const AppRoutes: Routes = [
     FlexLayoutModule,
     ReactiveFormsModule,
     DevintentModule,
-    RouterModule.forRoot(AppRoutes, {useHash: false})
+    RouterModule.forRoot(AppRoutes, {useHash: false}),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirePerformanceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

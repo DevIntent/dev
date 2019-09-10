@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "devintent-dev"
+  },
+  "targets": {
+    "devintent-dev": {
+      "hosting": {
+        "dev-demo": [
+          "devintent-dev"
+        ]
+      }
+    }
   }
 }

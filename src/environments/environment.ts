@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAXVg1clQAEJWdRiKnXFNEumJXmqn2gHrw',
+    authDomain: 'devintent-dev.firebaseapp.com',
+    databaseURL: 'https://devintent-dev.firebaseio.com',
+    projectId: 'devintent-dev',
+    storageBucket: 'devintent-dev.appspot.com',
+    messagingSenderId: '583027512098',
+    appId: '1:583027512098:web:60c5cf9eb37ef47693cb7b'
+  }
 };
 
 /*
@@ -13,4 +22,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+import 'zone.js/dist/zone-error';  // Included with Angular CLI.
