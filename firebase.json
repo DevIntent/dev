@@ -11,7 +11,7 @@
       "appAssociation": "AUTO",
       "rewrites": [
         {
-          "source": "/l/**",
+          "source": "/d/**",
           "dynamicLinks": true
         },
         {
