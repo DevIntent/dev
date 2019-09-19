@@ -9,8 +9,8 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./button-bar.component.scss']
 })
 export class ButtonBarComponent implements OnInit, OnDestroy {
-  @Input() navItems: NavItem[];
-  watcher: Subscription;
+  @Input() navItems: NavItem[] | undefined;
+  watcher: Subscription | undefined;
   namedButtons: NavItem[] = [];
   iconButtons: NavItem[] = [];
   overflowMenuItems: NavItem[] = [];
@@ -30,25 +30,27 @@ export class ButtonBarComponent implements OnInit, OnDestroy {
   }
 
   onMediaChange() {
-    const items = this.navItems.slice();
-    this.namedButtons = [];
-    this.iconButtons = [];
-    this.overflowMenuItems = [];
+    if (this.navItems) {
+      const items = this.navItems.slice();
+      this.namedButtons = [];
+      this.iconButtons = [];
+      this.overflowMenuItems = [];
 
-    if (this.mediaService.isActive('xs')) {
-      this.iconButtons = this.iconButtons.concat(items.splice(0, 5));
-    } else if (this.mediaService.isActive('sm')) {
-      this.namedButtons = this.namedButtons.concat(items.splice(0, 6));
-    } else if (this.mediaService.isActive('md')) {
-      this.namedButtons = this.namedButtons.concat(items.splice(0, 8));
-    } else if (this.mediaService.isActive('lg')) {
-      this.namedButtons = this.namedButtons.concat(items.splice(0, 12));
-    } else if (this.mediaService.isActive('xl')) {
-      this.namedButtons = this.namedButtons.concat(items.splice(0, 16));
-    }
+      if (this.mediaService.isActive('xs')) {
+        this.iconButtons = this.iconButtons.concat(items.splice(0, 5));
+      } else if (this.mediaService.isActive('sm')) {
+        this.namedButtons = this.namedButtons.concat(items.splice(0, 6));
+      } else if (this.mediaService.isActive('md')) {
+        this.namedButtons = this.namedButtons.concat(items.splice(0, 8));
+      } else if (this.mediaService.isActive('lg')) {
+        this.namedButtons = this.namedButtons.concat(items.splice(0, 12));
+      } else if (this.mediaService.isActive('xl')) {
+        this.namedButtons = this.namedButtons.concat(items.splice(0, 16));
+      }
 
-    if (items.length > 0) {
-      this.overflowMenuItems = items;
+      if (items.length > 0) {
+        this.overflowMenuItems = items;
+      }
     }
   }
 }
