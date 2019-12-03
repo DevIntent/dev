@@ -18,6 +18,7 @@
     "build:schematics": "tsc -p ./projects/schematics/tsconfig.json",
     "publish:lib": "npm run lint && npm run build:lib && npm publish ./dist/dev --access public",
     "publish:schematics": "npm run build:schematics && npm publish ./projects/schematics --access public",
+    "postinstall": "cd ./node_modules/protractor && npm i webdriver-manager@latest",
     "deploy": "ng deploy",
     "test": "ng test && npm run test:schematics",
     "test:schematics": "npm run build:schematics && jasmine ./projects/schematics/src/**/*_spec.js",
