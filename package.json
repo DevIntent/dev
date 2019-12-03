@@ -1,7 +1,7 @@
 {
   "name": "dev-demo",
   "description": "DevIntent Application Development Tools",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "repository": "https://github.com/DevIntent/dev",
   "homepage": "https://devintent-dev.web.app",
   "bugs": "https://github.com/DevIntent/dev/issues",
