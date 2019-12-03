@@ -1,4 +1,7 @@
 {
-  "entry": "./projects/dev/src/lib/theming/_theming.scss",
-  "dest": "dist/dev/_theming.scss"
+  "bundlerOptions": {
+    "entryFile": "./projects/dev/src/lib/theming/_theming.scss",
+    "rootDir": "./",
+    "outFile": "dist/dev/_theming.scss"
+  }
 }
