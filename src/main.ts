@@ -1,4 +1,4 @@
-import 'hammerjs';
+
 import * as LogRocket from 'logrocket';
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';

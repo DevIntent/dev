@@ -10,14 +10,14 @@
       "prefix": "dev",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss"
         }
       },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": false,
+            "aot": true,
             "outputPath": "dist/dev-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -45,7 +45,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -54,6 +53,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -146,7 +149,7 @@
       "prefix": "dev",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss"
         }
       },
       "architect": {
@@ -155,6 +158,11 @@
           "options": {
             "tsConfig": "projects/dev/tsconfig.lib.json",
             "project": "projects/dev/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/dev/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -180,5 +188,8 @@
       }
     }
   },
-  "defaultProject": "dev-demo"
+  "defaultProject": "dev-demo",
+  "cli": {
+    "analytics": "a80bb417-2132-4b22-83a1-b4c8c0c0a0af"
+  }
 }
