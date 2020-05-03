@@ -1,7 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {DevintentModule} from '@devintent/dev';
-import {AppRoutes} from '../app.module';
+import {appRoutes} from '../app.module';
 import {BusinessComponent} from '../business/business.component';
 import {CoffeeComponent} from '../coffee/coffee.component';
 import {DemosComponent} from '../demos/demos.component';
@@ -42,7 +42,7 @@ describe('ButtonBarDemoComponent', () => {
       ],
       imports: [
         DevintentModule,
-        RouterTestingModule.withRoutes(AppRoutes)
+        RouterTestingModule.withRoutes(appRoutes)
       ]
     })
     .compileComponents();

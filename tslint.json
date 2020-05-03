@@ -1,9 +1,27 @@
 {
+  "extends": ["tslint:recommended", "rxjs-tslint-rules"],
   "rulesDirectory": [
     "codelyzer"
   ],
   "rules": {
     "arrow-return-shorthand": true,
+    // Bans jasmine helper functions that will prevent the CI from properly running tests.
+    "ban": [
+      true,
+      ["fit"],
+      ["fdescribe"],
+      ["xit"],
+      ["xdescribe"],
+      ["Object.assign", "Use the spread operator instead."],
+      ["Object", "Avoid using the `Object` type. Did you mean `object`?"],
+      ["Function",
+        "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
+      ],
+      ["Boolean", "Avoid using the `Boolean` type. Did you mean `boolean`?"],
+      ["Number", "Avoid using the `Number` type. Did you mean `number`?"],
+      ["String", "Avoid using the `String` type. Did you mean `string`?"],
+      ["Symbol", "Avoid using the `Symbol` type. Did you mean `symbol`?"]
+    ],
     "callable-types": true,
     "class-name": true,
     "comment-format": [
@@ -88,6 +106,13 @@
       "single"
     ],
     "radix": true,
+    "rxjs-no-create": true,
+    "rxjs-no-exposed-subjects": true,
+    "rxjs-no-finnish": true,
+    "rxjs-no-ignored-subscribe": true,
+    "rxjs-no-nested-subscribe": true,
+    "rxjs-no-subject-value": true,
+    "rxjs-no-unsafe-takeuntil": [true, { "options": [{ "allow": [] }] }],
     "semicolon": [
       true,
       "always"
@@ -107,7 +132,7 @@
       }
     ],
     "unified-signatures": true,
-    "variable-name": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
     "whitespace": [
       true,
       "check-branch",
@@ -126,5 +151,25 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true
-  }
+  },
+  // Codelyzer rules
+  "component-class-suffix": true,
+  "component-selector": true,
+  "contextual-decorator": true,
+  "directive-class-suffix": true,
+  "directive-selector": true,
+  "template-accessibility-alt-text": true,
+  "template-accessibility-elements-content": true,
+  "template-accessibility-label-for": true,
+  "template-accessibility-tabindex-no-positive": true,
+  "template-accessibility-table-scope": true,
+  "template-accessibility-valid-aria": true,
+  "template-banana-in-box": true,
+  "template-click-events-have-key-events": true,
+  "template-mouse-events-have-key-events": true,
+  "template-no-autofocus": true,
+  "template-no-distracting-elements": true,
+  "template-no-negated-async": true,
+  "use-lifecycle-interface": true,
+  "use-pipe-transform-interface": true
 }

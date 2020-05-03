@@ -26,7 +26,7 @@ import {SixthComponent} from './sixth/sixth.component';
 import {TenthComponent} from './tenth/tenth.component';
 import {ThirdComponent} from './third/third.component';
 
-export const AppRoutes: Routes = [
+export const appRoutes: Routes = [
   {path: '', pathMatch: 'full', component: DemosComponent, children: []},
   {path: 'button-bar', component: ButtonBarDemoComponent, children: [
     {path: '', pathMatch: 'full', redirectTo: 'first'},
@@ -71,7 +71,7 @@ export const AppRoutes: Routes = [
     FlexLayoutModule,
     ReactiveFormsModule,
     DevintentModule,
-    RouterModule.forRoot(AppRoutes, {useHash: false}),
+    RouterModule.forRoot(appRoutes, {useHash: false}),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirePerformanceModule
   ],
