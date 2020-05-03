@@ -7,6 +7,6 @@ export const environment = {
     projectId: 'devintent-dev',
     storageBucket: 'devintent-dev.appspot.com',
     messagingSenderId: '583027512098',
-    appId: '1:583027512098:web:60c5cf9eb37ef47693cb7b'
-  }
+    appId: '1:583027512098:web:60c5cf9eb37ef47693cb7b',
+  },
 };

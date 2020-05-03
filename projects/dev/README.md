@@ -23,12 +23,13 @@ Find the [demo here](https://devintent-dev.firebaseapp.com/button-bar). Resize t
 features.
 
 #### Button Bar Template ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.html))
+
 ```html
-<dev-button-bar [navItems]="navItems" class="mat-elevation-z1"></dev-button-bar>
-<router-outlet></router-outlet>
+<dev-button-bar [navItems]="navItems" class="mat-elevation-z1"></dev-button-bar> <router-outlet></router-outlet>
 ```
 
 #### Button Bar Component ([example](https://github.com/DevIntent/dev/blob/master/src/app/button-bar-demo/button-bar-demo.component.ts))
+
 ```ts
 import {NavItem} from '@devintent/dev';
 ...
@@ -43,9 +44,11 @@ this.navItems = [
 ];
 ...
 ```
+
 Find icon names by searching the [Material Design Icons Tool](https://material.io/tools/icons/).
 
 #### Button Bar Module
+
 ```ts
 import {DevintentModule} from '@devintent/dev';
 ...
@@ -66,6 +69,7 @@ The component themes work with Angular Material [Custom Themes](https://material
 which are defined in `.scss` files.
 
 You should define your theme in a [SASS Partial](https://sass-lang.com/guide). For example, `_theme.scss`:
+
 ```scss
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -85,15 +89,16 @@ $demo-theme: mat-light-theme($demo-primary, $demo-accent, $demo-warn);
 
 $demo-typography: mat-typography-config(
   //$font-family: 'Roboto, monospace',
-  //$headline: mat-typography-level(32px, 48px, 700),
-  //$body-1: mat-typography-level(16px, 24px, 500)
+    //$headline: mat-typography-level(32px, 48px, 700),
+    //$body-1: mat-typography-level(16px, 24px, 500)
 );
 ```
 
 Then your primary SCSS entrypoint should import this theme file and pass the theme into both the Angular Material
 and DevIntent Dev components.
+
 ```scss
-@import "theme";
+@import 'theme';
 @import '~@devintent/dev/theming';
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -108,5 +113,6 @@ and DevIntent Dev components.
 // components know about your theme.
 @include dev-theme($demo-theme);
 ```
+
 Note: Custom typography is not yet implemented for these components, but you can use it with Angular Material components.
-See more in their [Typography Guide](https://material.angular.io/guide/typography). 
+See more in their [Typography Guide](https://material.angular.io/guide/typography).

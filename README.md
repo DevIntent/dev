@@ -20,9 +20,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 - Run `npm run build` to build the demo project.
-The build artifacts will be stored in the `dist/dev-demo` directory.
+  The build artifacts will be stored in the `dist/dev-demo` directory.
 - Run `npm run build:lib` to build the library project.
-The build artifacts will be stored in the `dist/dev` directory.
+  The build artifacts will be stored in the `dist/dev` directory.
 - Run `npm run build:schematics` to build the schematics project.
 
 ## Running unit tests

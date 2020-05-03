@@ -3,11 +3,7 @@
     {
       "target": "dev-demo",
       "public": "dist/dev-demo",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "appAssociation": "AUTO",
       "rewrites": [
         {

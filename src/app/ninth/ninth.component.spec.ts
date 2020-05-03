@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {NinthComponent} from './ninth.component';
+import { NinthComponent } from './ninth.component';
 
 describe('NinthComponent', () => {
   let component: NinthComponent;
@@ -8,9 +8,8 @@ describe('NinthComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-        declarations: [NinthComponent]
-      })
-      .compileComponents();
+      declarations: [NinthComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,12 +1,12 @@
-import {Component, OnInit, OnDestroy, Input} from '@angular/core';
-import {MediaObserver} from '@angular/flex-layout';
-import {NavItem} from '../nav-item';
-import {Subscription} from 'rxjs';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
+import { NavItem } from '../nav-item';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'dev-button-bar',
   templateUrl: './button-bar.component.html',
-  styleUrls: ['./button-bar.component.scss']
+  styleUrls: ['./button-bar.component.scss'],
 })
 export class ButtonBarComponent implements OnInit, OnDestroy {
   @Input() navItems: NavItem[] | undefined;
