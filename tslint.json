@@ -1,11 +1,8 @@
 {
-  "extends": ["tslint:recommended", "rxjs-tslint-rules"],
-  "rulesDirectory": [
-    "codelyzer"
-  ],
+  "extends": ["tslint:recommended", "rxjs-tslint-rules", "tslint-config-prettier"],
+  "rulesDirectory": ["codelyzer"],
   "rules": {
     "arrow-return-shorthand": true,
-    // Bans jasmine helper functions that will prevent the CI from properly running tests.
     "ban": [
       true,
       ["fit"],
@@ -14,9 +11,7 @@
       ["xdescribe"],
       ["Object.assign", "Use the spread operator instead."],
       ["Object", "Avoid using the `Object` type. Did you mean `object`?"],
-      ["Function",
-        "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
-      ],
+      ["Function", "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."],
       ["Boolean", "Avoid using the `Boolean` type. Did you mean `boolean`?"],
       ["Number", "Avoid using the `Number` type. Did you mean `number`?"],
       ["String", "Avoid using the `String` type. Did you mean `string`?"],
@@ -24,63 +19,36 @@
     ],
     "callable-types": true,
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
+    "comment-format": [true, "check-space"],
     "curly": true,
     "deprecation": {
       "severity": "warn"
     },
     "eofline": true,
     "forin": true,
-    "import-blacklist": [
-      true,
-      "rxjs/Rx"
-    ],
+    "import-blacklist": [true, "rxjs/Rx"],
     "import-spacing": true,
-    "indent": [
-      true,
-      "spaces"
-    ],
+    "indent": [true, "spaces"],
     "interface-over-type-literal": true,
     "label-position": true,
-    "max-line-length": [
-      true,
-      140
-    ],
+    "max-line-length": [true, 140],
     "member-access": false,
     "member-ordering": [
       true,
       {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
+        "order": ["static-field", "instance-field", "static-method", "instance-method"]
       }
     ],
     "no-arg": true,
     "no-bitwise": true,
-    "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ],
+    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-super": true,
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-inferrable-types": [true, "ignore-params"],
     "no-misused-new": true,
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
@@ -93,18 +61,9 @@
     "no-unused-expression": true,
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
-    "one-line": [
-      true,
-      "check-open-brace",
-      "check-catch",
-      "check-else",
-      "check-whitespace"
-    ],
+    "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
     "prefer-const": true,
-    "quotemark": [
-      true,
-      "single"
-    ],
+    "quotemark": [true, "single"],
     "radix": true,
     "rxjs-no-create": true,
     "rxjs-no-exposed-subjects": true,
@@ -112,15 +71,18 @@
     "rxjs-no-ignored-subscribe": true,
     "rxjs-no-nested-subscribe": true,
     "rxjs-no-subject-value": true,
-    "rxjs-no-unsafe-takeuntil": [true, { "options": [{ "allow": [] }] }],
-    "semicolon": [
+    "rxjs-no-unsafe-takeuntil": [
       true,
-      "always"
+      {
+        "options": [
+          {
+            "allow": []
+          }
+        ]
+      }
     ],
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
+    "semicolon": [true, "always"],
+    "triple-equals": [true, "allow-null-check"],
     "typedef-whitespace": [
       true,
       {
@@ -133,14 +95,7 @@
     ],
     "unified-signatures": true,
     "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-separator",
-      "check-type"
-    ],
+    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
     "no-output-on-prefix": true,
     "no-inputs-metadata-property": true,
     "no-outputs-metadata-property": true,
@@ -152,7 +107,6 @@
     "component-class-suffix": true,
     "directive-class-suffix": true
   },
-  // Codelyzer rules
   "component-class-suffix": true,
   "component-selector": true,
   "contextual-decorator": true,
