@@ -3,7 +3,7 @@
   "description": "DevIntent Application Development Tools",
   "version": "0.7.0",
   "repository": "https://github.com/DevIntent/dev",
-  "homepage": "https://devintent-dev.web.app",
+  "homepage": "https://devintent.dev",
   "bugs": "https://github.com/DevIntent/dev/issues",
   "engines": {
     "node": ">=12"
