@@ -1,6 +1,6 @@
 {
   "name": "@devintent/dev",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Application Development Library",
   "keywords": [
     "material", "design", "angular", "material design", "components"
@@ -18,7 +18,7 @@
     "@angular/cdk": "^9.0.0 || ^10.0.0-next.0 || ^10.0.0-rc.0",
     "@angular/common": "^9.0.0 || ^10.0.0-next.0 || ^10.0.0-rc.0",
     "@angular/core": "^9.0.0 || ^10.0.0-next.0 || ^10.0.0-rc.0",
-    "@angular/flex-layout": "^9.0.0-beta.29 || ^9.0.0",
+    "@angular/flex-layout": "^9.0.0-beta.29 || ^9.0.0 || ^10.0.0-beta.0 || ^10.0.0",
     "@angular/material": "^9.0.0 || ^10.0.0-next.0 || ^10.0.0-rc.0"
   }
 }

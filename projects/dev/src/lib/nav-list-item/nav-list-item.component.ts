@@ -48,11 +48,11 @@ export class NavListItemComponent implements OnInit, OnDestroy {
   }
 
   onItemSelected(item: NestedNavItem) {
-    if (!item.children || !item.children.length) {
-      this.router.navigate([item.path]);
+    if ((!item.children || !item.children.length) && item && item.path) {
+      this.router.navigateByUrl(item.path);
       this.navExpansionService.closeNav();
     }
-    if (item.children && item.children.length) {
+    if (item && item.children && item.children.length) {
       this.expanded = !this.expanded;
     }
   }
