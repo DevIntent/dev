@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+@mixin dev-nav-list-item-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  dev-nav-list-item {
+    .mat-list-item {
+      &.active {
+        background-color: mat-color($primary, 50);
+      }
+    }
+    &:hover,
+    &:focus {
+      > .mat-list-item:not(.expanded) {
+        background-color: mat-color($primary, 100);
+      }
+    }
+  }
+}

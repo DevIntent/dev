@@ -1,5 +1,5 @@
 export interface NavItem {
   label: string;
-  path: string;
+  path?: string;
   iconName: string;
 }

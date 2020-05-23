@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+
+dev-nav-list-item {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  width: 100%;
+
+  .mat-list-item {
+    padding: 8px 0;
+    display: flex;
+    width: auto;
+
+    .dev-path-icon {
+      margin-right: 40px;
+    }
+    .dev-caret-container {
+      flex: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

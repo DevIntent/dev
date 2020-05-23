@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { ButtonBarModule } from '@devintent/dev';
+import { ButtonBarModule, NavListItemModule } from '@devintent/dev';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { SeventhComponent } from './seventh/seventh.component';
 import { SixthComponent } from './sixth/sixth.component';
 import { TenthComponent } from './tenth/tenth.component';
 import { ThirdComponent } from './third/third.component';
+import { NavListItemDemoComponent } from './nav-list-item-demo/nav-list-item-demo.component';
 
 export const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: DemosComponent, children: [] },
@@ -47,6 +48,28 @@ export const appRoutes: Routes = [
       { path: 'coffee', component: CoffeeComponent, children: [] },
     ],
   },
+  {
+    path: 'nav-list-item',
+    component: NavListItemDemoComponent,
+    children: [
+      {
+        path: 'sections',
+        children: [
+          { path: 'first', component: FirstComponent, children: [] },
+          { path: 'second', component: SecondComponent, children: [] },
+          { path: 'third', component: ThirdComponent, children: [] },
+        ],
+      },
+      {
+        path: 'chapters',
+        children: [
+          { path: 'fourth', component: FourthComponent, children: [] },
+          { path: 'fifth', component: FifthComponent, children: [] },
+          { path: 'sixth', component: SixthComponent, children: [] },
+        ],
+      },
+    ],
+  },
   { path: '**', component: DemosComponent, children: [] },
 ];
 
@@ -67,6 +90,7 @@ export const appRoutes: Routes = [
     CoffeeComponent,
     ButtonBarDemoComponent,
     DemosComponent,
+    NavListItemDemoComponent,
   ],
   imports: [
     CommonModule,
@@ -75,6 +99,7 @@ export const appRoutes: Routes = [
     FlexLayoutModule,
     ReactiveFormsModule,
     ButtonBarModule,
+    NavListItemModule,
     RouterModule.forRoot(appRoutes, { useHash: false }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirePerformanceModule,
