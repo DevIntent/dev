@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav #appDrawer mode="side" [opened]="true" [disableClose]="true">
     <mat-nav-list aria-label="Side Navigation">
-      <dev-nav-list-item *ngFor="let item of navItems" [item]="item"></dev-nav-list-item>
+      <dev-nav-list-item *ngFor="let item of navItems; index as i" [item]="item" [initiallyExpanded]="i === 0"></dev-nav-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <router-outlet></router-outlet>

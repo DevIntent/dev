@@ -20,9 +20,9 @@ export class DevNavService {
   }
 
   public closeNav(): Promise<'open' | 'close' | null> {
-    if (this._appDrawer) {
-      if (!this._appDrawer.disableClose) {
-        return this._appDrawer.close();
+    if (this.appDrawer) {
+      if (!this.appDrawer.disableClose) {
+        return this.appDrawer.close();
       } else {
         return Promise.resolve<null>(null);
       }

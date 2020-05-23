@@ -13,6 +13,7 @@ export class NavListItemDemoComponent implements OnInit, AfterViewInit {
     {
       label: 'Sections',
       iconName: 'collections_bookmark',
+      path: 'nav-list-item/sections',
       children: [
         {
           label: 'First',
@@ -37,26 +38,33 @@ export class NavListItemDemoComponent implements OnInit, AfterViewInit {
     {
       label: 'Chapters',
       iconName: 'bookmarks',
+      path: 'nav-list-item/chapters',
       children: [
         {
-          label: 'First',
+          label: 'Fourth',
           iconName: 'book',
           path: 'nav-list-item/chapters/fourth',
           children: [],
         },
         {
-          label: 'Second',
+          label: 'Fifth',
           iconName: 'bookmark',
           path: 'nav-list-item/chapters/fifth',
           children: [],
         },
         {
-          label: 'Third',
+          label: 'Sixth',
           iconName: 'bookmark_border',
           path: 'nav-list-item/chapters/sixth',
           children: [],
         },
       ],
+    },
+    {
+      label: 'Feedback',
+      iconName: 'feedback',
+      path: 'nav-list-item/feedback',
+      children: [],
     },
   ];
 

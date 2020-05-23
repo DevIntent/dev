@@ -20,6 +20,7 @@ import { DevNavService } from './dev-nav.service';
   ],
 })
 export class NavListItemComponent implements OnInit, OnDestroy {
+  @Input() initiallyExpanded = false;
   expanded = false;
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
   @Input() item: NestedNavItem | undefined;
@@ -30,7 +31,11 @@ export class NavListItemComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.navExpansionService.currentUrl.pipe(takeUntil(this.destroyed)).subscribe((url: string) => {
-      if (this.item && this.item.path && url) {
+      if (this.initiallyExpanded) {
+        this.expanded = true;
+        this.ariaExpanded = this.expanded;
+        this.initiallyExpanded = false;
+      } else if (this.item && this.item.path && url) {
         this.expanded = url.indexOf(`/${this.item.path}`) === 0;
         this.ariaExpanded = this.expanded;
       }
