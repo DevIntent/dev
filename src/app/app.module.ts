@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { DevintentModule } from '@devintent/dev';
+import { ButtonBarModule } from '@devintent/dev';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -74,7 +74,7 @@ export const appRoutes: Routes = [
     BrowserAnimationsModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    DevintentModule,
+    ButtonBarModule,
     RouterModule.forRoot(appRoutes, { useHash: false }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirePerformanceModule,

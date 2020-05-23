@@ -1,7 +1,7 @@
 {
   "bundlerOptions": {
-    "entryFile": "./projects/dev/src/lib/theming/_theming.scss",
+    "entryFile": "./projects/dev/src/lib/core/theming/_all-theme.scss",
     "rootDir": "./",
-    "outFile": "dist/dev/_theming.scss"
+    "outFile": "dist/dev/_all-theme.scss"
   }
 }

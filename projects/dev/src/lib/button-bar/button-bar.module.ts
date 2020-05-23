@@ -8,7 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { ButtonBarComponent } from './button-bar/button-bar.component';
+import { ButtonBarComponent } from './button-bar.component';
 
 @NgModule({
   imports: [
@@ -33,4 +33,4 @@ import { ButtonBarComponent } from './button-bar/button-bar.component';
     FlexLayoutModule,
   ],
 })
-export class DevintentModule {}
+export class ButtonBarModule {}

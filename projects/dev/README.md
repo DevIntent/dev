@@ -50,10 +50,10 @@ Find icon names by searching the [Material Design Icons Tool](https://material.i
 #### Button Bar Module
 
 ```ts
-import {DevintentModule} from '@devintent/dev';
+import {ButtonBarModule} from '@devintent/dev';
 ...
 imports: [
-  DevintentModule
+  ButtonBarModule
 ],
 ```
 
@@ -94,12 +94,12 @@ $demo-typography: mat-typography-config(
 );
 ```
 
-Then your primary SCSS entrypoint should import this theme file and pass the theme into both the Angular Material
+Then your primary SCSS entry point should import this theme file and pass the theme into both the Angular Material
 and DevIntent Dev components.
 
 ```scss
 @import 'theme';
-@import '~@devintent/dev/theming';
+@import '~@devintent/dev/all-theme';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -114,5 +114,5 @@ and DevIntent Dev components.
 @include dev-theme($demo-theme);
 ```
 
-Note: Custom typography is not yet implemented for these components, but you can use it with Angular Material components.
-See more in their [Typography Guide](https://material.angular.io/guide/typography).
+**Note:** We have not yet implemented custom typography for these components, but you can use it with
+Angular Material components. See more in their [Typography Guide](https://material.angular.io/guide/typography).

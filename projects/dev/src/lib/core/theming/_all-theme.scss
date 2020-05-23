@@ -1,5 +1,5 @@
 // Import library functions for theme creation.
-@import '../button-bar/button-bar-theme';
+@import '../../button-bar/button-bar-theme';
 
 // Define a mixin that accepts a theme and outputs the theme-specific styles.
 @mixin dev-theme($theme) {

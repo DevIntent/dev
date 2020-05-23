@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
-import { NavItem } from '../nav-item';
+import { NavItem } from '../core/nav-item';
 import { Subscription } from 'rxjs';
 
 @Component({
